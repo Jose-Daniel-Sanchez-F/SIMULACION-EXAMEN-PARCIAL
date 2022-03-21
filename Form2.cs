@@ -55,8 +55,9 @@ namespace SIMULACION_EXAMEN_PARCIAL
         private void buttonOrdenar_Click(object sender, EventArgs e)
         {
             mostrarTemp = mostrarTemp.OrderBy(n => n.temperatura).ToList();
-        
-          
+            MessageBox.Show("Opcion no disponible."); 
+
+
         }
 
         private void buttonPromedio_Click(object sender, EventArgs e)
