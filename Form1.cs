@@ -33,7 +33,7 @@ namespace SIMULACION_EXAMEN_PARCIAL
 
         private void GuardarRegistro()
         {
-            FileStream stream= new FileStream("Temperaturas.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream stream= new FileStream("Temperaturas.txt", FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream);
 
             foreach(var departaemnto in departamento)
@@ -58,11 +58,18 @@ namespace SIMULACION_EXAMEN_PARCIAL
         {
             Departamentos departamentos = new Departamentos();
             departamentos.numDep = comboBox1.Text;
-            departamentos.temperatura = textBox1.Text+" grados centigrados ";
+            departamentos.temperatura = textBox1.Text+" grados centigrados";
             departamentos.fechaRegristro = Convert.ToDateTime(dateTimePicker1.Text);
 
             departamento.Add(departamentos);
-            GuardarRegistro();  
+            GuardarRegistro();
+           
+        }
+
+        private void buttonDatosRegistrados_Click(object sender, EventArgs e)
+        {
+            Form2 formregistro = new Form2();
+            formregistro.Show();
         }
     }
 }
