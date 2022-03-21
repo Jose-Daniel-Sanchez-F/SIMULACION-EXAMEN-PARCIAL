@@ -58,7 +58,7 @@ namespace SIMULACION_EXAMEN_PARCIAL
         {
             Departamentos departamentos = new Departamentos();
             departamentos.numDep = comboBox1.Text;
-            departamentos.temperatura = textBox1.Text+" grados centigrados";
+            departamentos.temperatura = textBox1.Text;
             departamentos.fechaRegristro = Convert.ToDateTime(dateTimePicker1.Text);
 
             departamento.Add(departamentos);

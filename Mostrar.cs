@@ -10,7 +10,7 @@ namespace SIMULACION_EXAMEN_PARCIAL
     {
         public string Dep { get; set; }
 
-        public string temperatura { get; set; }
+        public decimal temperatura { get; set; }
 
         public DateTime fechaRegristro { get; set; }
     }
